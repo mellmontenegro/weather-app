@@ -1,14 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>
-      Hello World
-    </h1>
-  </body>
+  <html>
+    <head>
+      <title>Weather App</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="src/styles.css" />
+      <script
+        src="https://kit.fontawesome.com/ccfce3c2e3.js"
+        crossorigin="anonymous"
+      ></script>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="weather-app">
+          <form>
+            <div class="row">
+              <div class="col-md-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter a city"
+                />
+              </div>
+              <div class="col-md-3">
+                <input type="submit" value="Search" class="btn btn-primary" />
+              </div>
+            </div>
+          </form>
+
+          <div class="container">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Today</button>
+              <button type="button" class="btn btn-secondary">Tomorrow</button>
+              <button type="button" class="btn btn-secondary">5 Days</button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1>Lisbon</h1>
+                <span>
+                  Tuesday 21:00
+                </span>
+                <h2>
+                  25
+                  <small class="unit">
+                    ºC | F
+                  </small>
+                </h2>
+                <p class="real-feel">
+                  Real Feel: 28ºC
+                </p>
+                <span class="max-min">
+                  Max: 30ºC<br />
+                  Min: 15ºC
+                </span>
+              </div>
+              <div class="col">
+                <i class="fas fa-sun sunny"></i>
+                <h3>Sunny</h3>
+                <p class="wind-precipitation">
+                  Wind: 12km/h<br />
+                  Precipitation: 12%
+                </p>
+              </div>
+              <br />
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    6am
+                  </div>
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    9am
+                  </div>
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    12pm
+                  </div>
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    3pm
+                  </div>
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    6pm
+                  </div>
+                  <div class="col">
+                    20ºC <br />
+                    <i class="fas fa-cloud-sun cloudy"></i><br />
+                    9pm
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="src/index.js"></script>
+    </body>
+  </html>
 </html>
