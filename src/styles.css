@@ -1,0 +1,55 @@
+.weather-app {
+  font-family: "Muli", sans-serif;
+  margin: 28px auto;
+  display: block;
+  padding: 12px;
+  border: 1px solid gray;
+  border-style: dotted;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 56%,
+    #ffbac3 100%
+  );
+}
+
+form {
+  display: block;
+}
+
+.btn-group {
+  display: block;
+  position: relative;
+  padding: 8px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 18px;
+  position: relative;
+}
+
+.sunny {
+  display: block;
+  color: black;
+  font-size: 70px;
+}
+
+.unit {
+  font-size: 12px;
+  position: relative;
+  top: -12px;
+  left: 3px;
+}
+
+.cloudy {
+  font-size: 25px;
+}
