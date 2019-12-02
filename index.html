@@ -31,9 +31,10 @@
             <div class="row">
               <div class="col-md-9">
                 <input
-                  type="text"
+                  type="search"
                   class="form-control"
                   placeholder="Enter a city"
+                  id="cityInput"
                 />
               </div>
               <div class="col-md-3">
@@ -52,33 +53,29 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <h1>Lisbon</h1>
+                <h1 id="city"></h1>
                 <span>
                   Tuesday 21:00
                 </span>
-                <h2>
-                  25
+                <h2 id="temperature">
                   <small class="unit">
                     ºC | F
                   </small>
                 </h2>
-                <p class="real-feel">
-                  Real Feel: 28ºC
-                </p>
-                <span class="max-min">
-                  Max: 30ºC<br />
-                  Min: 15ºC
-                </span>
+                <ul class="max-min">
+                  <li>Max: <span id="tempmax"></span>ºC</li>
+                  <li>Max: <span id="tempmin"></span>ºC</li>
+                </ul>
               </div>
               <div class="col">
                 <i class="fas fa-sun sunny"></i>
-                <h3>Sunny</h3>
-                <p class="wind-precipitation">
-                  Wind: 12km/h<br />
-                  Precipitation: 12%
-                </p>
+                <h3 id="description"></h3>
+                <ul class="wind-humidity"></ul>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                </ul>
               </div>
-              <br />
+
               <div class="container">
                 <div class="row">
                   <div class="col">
