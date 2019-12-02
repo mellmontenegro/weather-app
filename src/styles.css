@@ -63,11 +63,19 @@ li::first-letter {
   font-size: 70px;
 }
 
-.unit {
+.units {
   font-size: 12px;
   position: relative;
-  top: -12px;
-  left: 3px;
+  top: -22px;
+}
+
+.units .active {
+  color: black;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
 }
 
 .cloudy {

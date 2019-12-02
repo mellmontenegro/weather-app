@@ -28,18 +28,20 @@ function showTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let tempmaxElement = document.querySelector("#tempmax");
-  let tempminElement = document.querySelector("#tempmin");
+  let maxElement = document.querySelector("#max");
+  let minElement = document.querySelector("#min");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
+  celciusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  tempmaxElement.innerHTML = Math.round(response.data.main.temp_max);
-  tempminElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxElement.innerHTML = Math.round(response.data.main.temp_max);
+  minElement.innerHTML = Math.round(response.data.main.temp_min);
   dateElement.innerHTML = currentDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
@@ -61,7 +63,32 @@ function manageSubmit(event) {
   console.log(cityInputElement.value);
 }
 
-search("Lisbon");
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celciusConverter.classList.remove("active");
+  fahrenheitConverter.classList.add("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelciusTemperature(event) {
+  event.preventDefault();
+  fahrenheitConverter.classList.remove("active");
+  celciusConverter.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", manageSubmit);
+
+let fahrenheitConverter = document.querySelector("#fahrenheit-converter");
+fahrenheitConverter.addEventListener("click", showFahrenheitTemperature);
+
+let celciusConverter = document.querySelector("#celcius-converter");
+celciusConverter.addEventListener("click", showCelciusTemperature);
+
+search("Lisbon");
