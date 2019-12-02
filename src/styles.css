@@ -36,6 +36,9 @@ h2 {
 h3 {
   font-size: 18px;
   position: relative;
+}
+
+h3::first-letter {
   text-transform: capitalize;
 }
 
@@ -48,11 +51,10 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-transform: capitalize;
 }
 
-.wind {
-  text-transform: none;
+li::first-letter {
+  text-transform: capitalize;
 }
 
 .sunny {
