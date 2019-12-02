@@ -1,5 +1,8 @@
-.weather-app {
+body {
   font-family: "Muli", sans-serif;
+}
+
+.weather-app {
   margin: 28px auto;
   display: block;
   padding: 12px;
@@ -34,17 +37,26 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 14px;
   position: relative;
 }
 
-h3::first-letter {
+p {
+  font-size: 14px;
+}
+
+p::first-letter {
   text-transform: capitalize;
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+.weather-conditions {
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 li {
@@ -55,6 +67,17 @@ li {
 
 li::first-letter {
   text-transform: capitalize;
+}
+
+.weather-description img {
+  display: block;
+  margin-top: 70px;
+  height: 100px;
+  width: 100px;
+}
+
+.weather-forecast {
+  margin-top: 10px;
 }
 
 .sunny {

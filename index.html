@@ -53,10 +53,10 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col">
+              <div class="col-4">
                 <h1 id="city"></h1>
                 <ul>
-                  <li>Updated at <span id="date"></span></li>
+                  <li><small>Updated <span id="date"></span></small></li>
                 </ul>
                 <h2><strong id="temperature"></strong>
                   <span class="units">
@@ -64,59 +64,33 @@
                     <a href="#" id="fahrenheit-converter">ºF</a></span>
                   </small>
                 </h2>
+                <div>
                 <ul class="max-min">
                   <li>Max: <span id="max"></span>ºC</li>
                   <li>Max: <span id="min"></span>ºC</li>
                 </ul>
+                </div>
               </div>
-              <div class="col">
+              <div class="col-4 weather-description">
                 <img 
                 src="http://openweathermap.org/img/wn/10d@2x.png"
                 alt=""
                 id="icon" />
-                <h3 id="description"></h3>
+                <p id="description"></p>
+              </div>
+              <div class="col-4 weather-conditions">
                 <ul class="wind-humidity"></ul>
                   <li>Wind: <span id="wind"></span>km/h</li>
                   <li>Humidity: <span id="humidity"></span>%</li>
                 </ul>
+                </div>
               </div>
 
               <div class="container">
-                <div class="row">
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    6am
-                  </div>
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    9am
-                  </div>
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    12pm
-                  </div>
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    3pm
-                  </div>
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    6pm
-                  </div>
-                  <div class="col">
-                    20ºC <br />
-                    <i class="fas fa-cloud-sun cloudy"></i><br />
-                    9pm
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                <div class="row weather-forecast" id="forecast">
+        </div>
+        </div>
+        </div>
         </div>
         <p>
           <a
