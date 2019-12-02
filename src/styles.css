@@ -36,6 +36,23 @@ h2 {
 h3 {
   font-size: 18px;
   position: relative;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.wind {
+  text-transform: none;
 }
 
 .sunny {
