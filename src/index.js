@@ -31,6 +31,8 @@ function showTemperature(response) {
   let tempmaxElement = document.querySelector("#tempmax");
   let tempminElement = document.querySelector("#tempmin");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -39,6 +41,11 @@ function showTemperature(response) {
   tempmaxElement.innerHTML = Math.round(response.data.main.temp_max);
   tempminElement.innerHTML = Math.round(response.data.main.temp_min);
   dateElement.innerHTML = currentDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let city = "Lisbon";
