@@ -3,6 +3,7 @@ body {
 }
 
 .weather-app {
+  max-width: 600px;
   margin: 28px auto;
   display: block;
   padding: 12px;
@@ -74,13 +75,13 @@ li::first-letter {
 
 .weather-description {
   text-align: center;
+  display: block;
+  margin: 10px auto;
 }
 
 .weather-description img {
   display: block;
-  margin-top: 70px;
-  height: 100px;
-  width: 100px;
+  margin: 40px auto;
 }
 
 .weather-forecast {
@@ -89,7 +90,7 @@ li::first-letter {
 
 .weather-forecast img {
   display: block;
-  margin-top: 10px;
+  margin: 10px auto;
   height: 50px;
   width: 50px;
 }
